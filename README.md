@@ -1,2 +1,2 @@
-# products-app
+Product App in Angular
  
