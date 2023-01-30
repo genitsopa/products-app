@@ -1,0 +1,42 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "price": 7,
+      "date": "2023-01-23T23:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Pc",
+      "category": "Electronics",
+      "price": 450,
+      "date": "2023-01-06T23:00:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Orange",
+      "category": "Fruits",
+      "price": 2,
+      "date": "2023-01-13T23:00:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Carrot",
+      "category": "Vegetables",
+      "price": 8,
+      "date": "2023-01-06T23:00:00.000Z",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
