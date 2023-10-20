@@ -1,10 +1,7 @@
 .login-container {
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-evenly;
-	align-items: center;
-	align-content: stretch;      
+	align-items: center;   
 }
 
 img {
@@ -56,9 +53,4 @@ mat-card {
     padding-right: 60px;
     padding-bottom: 4px;
     text-decoration: none;
-  }
-
-  .error {
-    text-align: right;
-    color: red;
   }

@@ -3,14 +3,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   email="";
   password="";
   errorMsg="";
@@ -28,21 +26,24 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]]
   })
 
-  login() {
+  onSubmit() {
     if(this.email.trim().length === 0){
       this.errorMsg = "Email is required";
     }else if(this.password.trim().length === 0) {
       this.errorMsg = "Password is required";
     } else {
       this.errorMsg="";
-      let res = this.auth.login(this.email, this.password);
-      if(res === 200) {
+      this.auth.login(this.email, this.password).subscribe(
+      (response) => {
+        console.log('Login Successful', response);
         alert("Login successfully!");
         this.router.navigate(['home'])
-      }
-      if(res ===403) {
+      },
+      (error) => {
+        console.error('Login Failed', error);
         alert("Invalid login,try again!");
       }
+    );
     }
   }
 
@@ -52,5 +53,4 @@ export class LoginComponent implements OnInit {
     }
     console.log(this.loginForm.value);
   }
-
 }

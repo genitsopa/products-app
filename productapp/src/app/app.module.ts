@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSortModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
